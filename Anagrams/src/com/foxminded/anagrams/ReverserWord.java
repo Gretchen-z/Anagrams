@@ -1,8 +1,9 @@
-package task1;
-public class WordReverser implements WordChanger {
+package com.foxminded.anagrams;
+
+public class ReverserWord implements Reverser {
     @Override
-    public String changeWord(String str) {
-	char[] word = str.toCharArray();
+    public String reverse(String string) {
+	char[] word = string.toCharArray();
 	int beginPosition = 0;
 	int endPosition = word.length - 1;
 
