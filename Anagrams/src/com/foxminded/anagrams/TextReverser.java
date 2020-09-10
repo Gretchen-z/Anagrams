@@ -1,11 +1,11 @@
 package com.foxminded.anagrams;
 import java.util.StringJoiner;
 
-public class ReverserText implements Reverser {
+public class TextReverser implements Reverser {
     private static final String SEPARATOR = " ";
     private Reverser wordReverser;
 
-    ReverserText(Reverser wordReverser) {
+    public TextReverser(Reverser wordReverser) {
 	this.wordReverser = wordReverser;
     }
 
@@ -13,8 +13,8 @@ public class ReverserText implements Reverser {
     public String reverse(String inputText) {
 	StringJoiner textAnagrams = new StringJoiner(SEPARATOR);
 
-	for (String words : inputText.split(SEPARATOR)) {
-	    textAnagrams.add(wordReverser.reverse(words));
+	for (String word : inputText.split(SEPARATOR)) {
+	    textAnagrams.add(wordReverser.reverse(word));
 	}
 	return textAnagrams.toString();
     }

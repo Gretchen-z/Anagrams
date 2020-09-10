@@ -1,6 +1,6 @@
 package com.foxminded.anagrams;
 
-public class ReverserWord implements Reverser {
+public class WordReverser implements Reverser {
     @Override
     public String reverse(String string) {
 	char[] word = string.toCharArray();
